@@ -1,0 +1,66 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "legal-sathi-2025-d4124",
+          "appId": "1:281211190180:android:5dc4911ee90bd907cb9f31",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "legal-sathi-2025-d4124",
+          "configurations": {
+            "android": "1:281211190180:android:5dc4911ee90bd907cb9f31",
+            "ios": "1:281211190180:ios:78c42a6ad43b61c0cb9f31",
+            "macos": "1:281211190180:ios:78c42a6ad43b61c0cb9f31",
+            "web": "1:281211190180:web:2f1ea5a8a71da64ccb9f31",
+            "windows": "1:281211190180:web:9a6682dc91136705cb9f31"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "disallowLegacyRuntimeConfig": true,
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": []
+    }
+  ],
+  "hosting": {
+    "target": "main",
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "appdistribution": {
+    "app": "1:281211190180:android:5dc4911ee90bd907cb9f31",
+    "groups": ["beta-testers"],
+    "releaseNotes": "LexAni Beta — AI legal assistant for Indian families"
+  }
+}

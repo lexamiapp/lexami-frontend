@@ -1,0 +1,52 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // ── Profile pictures ──────────────────────────────────────
+    // Users can upload/read their own profile picture.
+    // Path: users/{userId}/profile_pic/{fileName}
+    match /users/{userId}/profile_pic/{fileName} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.auth.uid == userId
+                   && request.resource.size  < 5 * 1024 * 1024   // max 5 MB
+                   && request.resource.contentType.matches('image/.*');
+    }
+
+    // ── Evidence vault files ───────────────────────────────────
+    // Users can manage their own evidence vault files.
+    // Path: vault/{userId}/{fileName}
+    match /vault/{userId}/{fileName} {
+      allow read:  if request.auth != null && request.auth.uid == userId;
+      allow write: if request.auth != null
+                   && request.auth.uid == userId
+                   && request.resource.size < 50 * 1024 * 1024;  // max 50 MB
+    }
+
+    // ── Case documents ─────────────────────────────────────────
+    // Path: cases/{caseId}/documents/{fileName}
+    match /cases/{caseId}/documents/{fileName} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.resource.size < 20 * 1024 * 1024;  // max 20 MB
+    }
+
+    // ── Advisor documents ──────────────────────────────────────
+    // Advisors upload their own verification docs.
+    // Path: advisors/{advisorId}/{fileName}
+    match /advisors/{advisorId}/{fileName} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null
+                   && request.auth.uid == advisorId
+                   && request.resource.size < 10 * 1024 * 1024;  // max 10 MB
+    }
+
+    // ── Public assets (read-only) ──────────────────────────────
+    match /public/{allPaths=**} {
+      allow read:  if true;
+      allow write: if false;
+    }
+
+  }
+}

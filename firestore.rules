@@ -1,0 +1,119 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // --- Helper Functions ---
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // --- Users ---
+    // Allow authenticated users to read profiles (needed for search/chat)
+    // Only owner can write/update their own profile
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(userId);
+    }
+
+    // --- Advisors ---
+    // Publicly readable for searching advisors
+    // Advisors can register/update their own data
+    match /advisors/{advisorId} {
+      allow read: if true;
+      allow create: if isOwner(advisorId);
+      allow update: if isOwner(advisorId) || (isAuthenticated() && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true);
+    }
+
+    // --- Legal Cases ---
+    // strictly private to the user
+    match /cases/{caseId} {
+      allow create: if isAuthenticated();
+      allow read, update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // --- Analysis History ---
+    match /analysis_history/{historyId} {
+      allow create: if isAuthenticated();
+      allow read, update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+    
+    // --- Alimony Records ---
+    match /alimony_records/{recordId} {
+      allow create: if isAuthenticated();
+      allow read, update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // --- Evidence Vault ---
+    match /vault/{evidenceId} {
+      allow create: if isAuthenticated();
+      allow read, update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // --- Transactions ---
+    match /transactions/{txId} {
+      allow create: if isAuthenticated();
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // --- Notifications ---
+    match /notifications/{notifId} {
+      allow create: if isAuthenticated();
+      allow read, update: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // --- Forum ---
+    match /forum/{questionId} {
+      allow read: if true;
+      allow create: if isAuthenticated();
+      // Allow author to edit, or any auth user to update likes/reposts
+      allow update: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid || 
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likesCount', 'likedBy', 'commentsCount', 'repostsCount', 'repostedBy'])
+      );
+      
+      match /comments/{commentId} {
+        allow read: if true;
+        allow create: if isAuthenticated();
+        allow update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      }
+    }
+
+    // --- Blogs ---
+    match /blogs/{blogId} {
+      allow read: if true; // Approved blogs are public
+      allow create: if isAuthenticated(); // Advisors submit blogs
+      allow update: if isAuthenticated() && resource.data.authorId == request.auth.uid;
+    }
+
+    // --- Channels ---
+    match /channels/{channelId} {
+      allow read: if true;
+      allow create: if isAuthenticated();
+      // Owner updates channel info, others can only follow
+      allow update: if isAuthenticated() && (
+        resource.data.ownerId == request.auth.uid || 
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['followersCount'])
+      );
+
+      match /posts/{postId} {
+        allow read: if true;
+        allow create: if isAuthenticated();
+        // Author updates post, others can like/repost
+        allow update: if isAuthenticated() && (
+          resource.data.authorId == request.auth.uid ||
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likesCount', 'likedBy', 'repostsCount', 'repostedBy', 'commentsCount'])
+        );
+        
+        match /comments/{commentId} {
+           allow read: if true;
+           allow create: if isAuthenticated();
+           allow update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+        }
+      }
+    }
+  }
+}

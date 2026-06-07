@@ -1,0 +1,19 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.git/
+.DS_Store
+deploy_to_cloud.ps1
+README.md
+LICENSE
+# knowledge_base/ should be INCLUDED for RAG to work.
+# Only ignore if we are baking specific files, but generally we want code.
+# The key is disregarding large local artifacts or scripts that don't belong in the container.

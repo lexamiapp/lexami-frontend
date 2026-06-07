@@ -1,0 +1,170 @@
+NYAY MITRA - 3-YEAR FINANCIAL PROJECTIONS,,,,
+All figures in Indian Rupees (₹),,,,
+,,,,
+ASSUMPTIONS & UNIT ECONOMICS,,,,
+Metric,Value,Source,Notes,
+Premium Subscription Price,₹99/month,Internal pricing,Unlimited AI queries + features,
+Pro Subscription Price,₹499/month,Internal pricing,Dedicated case manager + video,
+Average Revenue Per User (ARPU),₹99/month,Conservative estimate,Assumes 90% Premium / 10% Pro,
+Customer Lifetime (months),18,Industry average,SaaS retention estimate,
+Churn Rate (monthly),5%,Beta testing data,85% weekly retention = ~5% monthly,
+,,,,
+Customer Acquisition Cost (CAC),₹250,Market research,Digital marketing + referrals,
+Lifetime Value (LTV),₹1782,Calculated,₹99 × 18 months,
+LTV/CAC Ratio,7.1x,Calculated,Healthy >3x,
+,,,,
+Cost Per User (monthly),₹6,Internal analysis,Cloud + AI + Support,
+  - Cloud Hosting,₹1.50,GCP pricing,Auto-scaling serverless,
+  - AI API Calls,₹3.50,Gemini Flash pricing,~20 queries/user/month,
+  - Support & Misc,₹1.00,Estimate,Customer support overhead,
+,,,,
+Gross Margin,94%,Calculated,(₹99 - ₹6) / ₹99,
+,,,,
+,,,,
+YEAR 1 PROJECTIONS (Month by Month),,,,
+Month,Users (Cumulative),Monthly Revenue,Monthly Costs,Monthly Profit
+Month 1,500,₹49500,₹128000,₹-78500
+Month 2,1000,₹99000,₹131000,₹-32000
+Month 3,2000,₹198000,₹137000,₹61000
+Month 4,2500,₹247500,₹140000,₹107500
+Month 5,3000,₹297000,₹143000,₹154000
+Month 6,3500,₹346500,₹146000,₹200500
+Month 7,4000,₹396000,₹149000,₹247000
+Month 8,4500,₹445500,₹152000,₹293500
+Month 9,5000,₹495000,₹155000,₹340000
+Month 10,5500,₹544500,₹158000,₹386500
+Month 11,6000,₹594000,₹161000,₹433000
+Month 12,6000,₹594000,₹161000,₹433000
+,,,,
+YEAR 1 TOTALS,,,,
+Total Users (End of Y1),6000,,,
+Annual Revenue,₹71.28 Lakhs,6000 × ₹99 × 12,,
+Annual Operating Costs,₹55 Lakhs,"Marketing ₹40L, Product ₹8L, Team ₹4L, Ops ₹3L",,
+Net Profit,₹16.28 Lakhs,Positive from Month 3,,
+,,,,
+,,,,
+YEAR 2 PROJECTIONS (Quarterly),,,,
+Quarter,Users (End),Quarterly Revenue,Quarterly Costs,Quarterly Profit
+Q1,10000,₹29.7 Lakhs,₹12 Lakhs,₹17.7 Lakhs
+Q2,15000,₹44.55 Lakhs,₹15 Lakhs,₹29.55 Lakhs
+Q3,20000,₹59.4 Lakhs,₹18 Lakhs,₹41.4 Lakhs
+Q4,25000,₹74.25 Lakhs,₹21 Lakhs,₹53.25 Lakhs
+,,,,
+YEAR 2 TOTALS,,,,
+Total Users (End of Y2),25000,,,
+Annual Revenue,₹2.97 Crores,"25K avg × ₹99 × 12 (simplified)",,
+Annual Operating Costs,₹1.20 Crores,"Scaled marketing, team expansion",,
+Net Profit,₹1.77 Crores,Year-on-year growth 986%,,
+Cost Per User (annual),₹4800,₹1.2 Cr / 25K users,,
+Revenue Per User (annual),₹11880,₹99 × 12 months,,
+,,,,
+,,,,
+YEAR 3 PROJECTIONS (Quarterly),,,,
+Quarter,Users (End),Quarterly Revenue,Quarterly Costs,Quarterly Profit
+Q1,40000,₹11.88 Crores,₹80 Lakhs,₹10.08 Crores
+Q2,60000,₹17.82 Crores,₹1.2 Crores,₹16.62 Crores
+Q3,80000,₹23.76 Crores,₹1.6 Crores,₹22.16 Crores
+Q4,100000,₹29.7 Crores,₹2.0 Crores,₹27.7 Crores
+,,,,
+YEAR 3 TOTALS,,,,
+Total Users (End of Y3),100000,,,
+Annual Revenue,₹11.88 Crores,100K × ₹99 × 12,,
+Annual Operating Costs,₹3.50 Crores,"Mature operations, economies of scale",,
+Net Profit,₹8.38 Crores,Margin 70.5%,,
+,,,,
+,,,,
+REVENUE BREAKDOWN BY SOURCE (Year 3),,,,
+Revenue Stream,Amount,% of Total,Notes,
+Premium Subscriptions (₹99),₹10.69 Cr,90%,90K users × ₹99 × 12,
+Pro Subscriptions (₹499),₹59.88 Lakhs,5%,10K users × ₹499 × 12,
+Advisor Commissions (15%),₹35.64 Lakhs,3%,₹2.376 Cr consultation revenue,
+B2B Licensing,₹23.76 Lakhs,2%,White-label for 2 law firms,
+Total Revenue,₹11.88 Cr,100%,,
+,,,,
+,,,,
+COST BREAKDOWN (Year 3),,,,
+Cost Category,Amount,% of Total,Notes,
+Cloud Infrastructure,₹1.50 Lakhs,4%,Google Cloud Run + Firebase,
+AI API Costs (Gemini),₹3.50 Lakhs,10%,100K users × 20 queries × ₹0.0175,
+Marketing & Sales,₹1.20 Crores,34%,Scaled digital campaigns + partnerships,
+Team Salaries,₹1.40 Crores,40%,"CTO, 5 engineers, 3 content, 5 support",
+Operations & Overhead,₹40 Lakhs,11%,"Office, legal, compliance, misc",
+Total Costs,₹3.50 Crores,100%,,
+,,,,
+,,,,
+KEY METRICS SUMMARY,,,,
+Metric,Year 1,Year 2,Year 3
+Total Users,6000,25000,100000
+Revenue,₹71L,₹2.97 Cr,₹11.88 Cr
+Costs,₹55L,₹1.20 Cr,₹3.50 Cr
+Profit,₹16L,₹1.77 Cr,₹8.38 Cr
+Profit Margin,22.8%,59.6%,70.5%
+Revenue Growth,-,316%,300%
+User Growth,-,317%,300%
+CAC,₹250,₹220,₹180
+LTV,₹1782,₹1782,₹1782
+LTV/CAC,7.1x,8.1x,9.9x
+Monthly Burn (Early),₹-78K (M1),₹0 (Profitable),₹0 (Profitable)
+Breakeven Month,Month 3,Already profitable,Already profitable
+,,,,
+,,,,
+FUNDRAISING ROADMAP,,,,
+Round,Amount,Valuation,Equity,Timeline
+Seed,₹25 Lakhs,₹2 Cr pre-money,11-13%,Now (Jan 2026)
+Series A,₹5 Crores,₹20 Cr pre-money,20-25%,Month 18 (Jun 2027)
+Series B,₹25 Crores,₹100 Cr pre-money,20%,Month 36 (Jan 2029)
+,,,,
+USE OF SEED FUNDS (₹25 Lakhs),,,,
+Category,Amount,% of Total,Details,
+Marketing & User Acquisition,₹10 Lakhs,40%,"Google/FB ads, influencer marketing, content",
+Product Development & AI,₹8 Lakhs,32%,"AI fine-tuning, features, security audits",
+Team Expansion,₹4 Lakhs,16%,"CTO hire, 2 legal writers, 2 support staff",
+Operations & Infrastructure,₹3 Lakhs,12%,"Cloud credits, legal compliance, office",
+Total,₹25 Lakhs,100%,,
+,,,,
+,,,,
+MARKET ASSUMPTIONS,,,,
+Total Addressable Market (TAM),₹10000 Crores,100M families × ₹99 × 12 × 8% adoption,
+Serviceable Addressable Market (SAM),₹2000 Crores,20M active seekers in Tier 1/2 cities,
+Serviceable Obtainable Market (SOM Y3),₹59.4 Crores,500K users (2.5% of SAM),
+,,,,
+COMPETITIVE BENCHMARKS,,,,
+Company,Revenue (FY24),Funding,Users (Est),
+Vakilsearch,₹50 Crores,$10.9M,~50K,
+LawRato,₹6.7M USD,₹570K,~10K,
+MyAdvo,₹3.6 Crores,$1.9M,~5K,
+Nyay Mitra (Y3 Projection),₹11.88 Crores,₹25L (Seeking),100K (Target),
+,,,,
+,,,,
+DATA SOURCES & REFERENCES,,,,
+Source,Data Point,Date,
+Ministry of Law & Justice,54M pending cases,Jan 2026,
+NCRB Crime in India Report,1.4L domestic violence cases,2022,
+Bar Council of India,20L lawyers (1:710 ratio),Aug 2023,
+Grand View Research,₹8500 Cr legal tech market,2024,
+Tracxn India LegalTech Report,493% funding surge,2025,
+Economic Times / IAMAI,886M internet users,Dec 2024,
+IBEF India Report,690M smartphone users,Q3 2024,
+Legal consultation surveys,"₹1K-₹5K initial, ₹15K-₹5L divorce","2024 (lawcrust.com, legals365.com)",
+,,,,
+RISK FACTORS,,,,
+Risk,Likelihood,Mitigation Strategy,
+High CAC in legal sector,Medium,Viral referral program + organic content,
+Regulatory changes,Medium,Bar Council partnerships + position as info not advice,
+AI accuracy concerns,Medium,Human-in-loop verification + disclaimers,
+Advisor churn,Low,Revenue sharing model + exclusive benefits,
+Competition from big tech,Low,First-mover + family law specialization moat,
+,,,,
+,,,,
+NOTES:,,,,
+"1. All projections are conservative and based on verified market data",,,,
+"2. User growth assumes 3-5% monthly churn and organic + paid acquisition",,,,
+"3. LTV calculated at 18 months average (conservative for SaaS)",,,,
+"4. Cost per user includes full stack: infrastructure, AI, support",,,,
+"5. Marketing spend front-loaded in Year 1, then optimized for CAC efficiency",,,,
+"6. Series A assumes 10K users and ₹10L ARR as minimum traction",,,,
+"7. Revenue model is 90% subscriptions, 10% marketplace/ancillary",,,,
+,,,,
+Created by: Nyay Mitra Financial Planning Team,,,,
+Last Updated: January 27 2026,,,,
+Version: 1.0 - SINE IIT Bombay Pitch,,,,

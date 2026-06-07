@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "legal-sathi-2025-d4124"
+  },
+  "targets": {
+    "legal-sathi-2025-d4124": {
+      "hosting": {
+        "main": [
+          "legalsathi-app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
